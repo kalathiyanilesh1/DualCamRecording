@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qkp-td-BwB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="DWk-zS-skP">
+            <objects>
+                <viewController id="Qkp-td-BwB" customClass="ViewController" customModule="AVMultiCamPiP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FfW-H0-6Bz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VaV-w8-RIi" customClass="PreviewView" customModule="AVMultiCamPiP" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="87" width="414" height="736"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" secondItem="VaV-w8-RIi" secondAttribute="width" multiplier="16:9" id="G0G-jY-97j"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsI-xc-dha" customClass="PreviewView" customModule="AVMultiCamPiP" customModuleProvider="target">
+                                <rect key="frame" x="20" y="619" width="103.5" height="184"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" secondItem="PsI-xc-dha" secondAttribute="width" multiplier="16:9" id="Kfd-9N-qOF"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSt-NH-JRt">
+                                <rect key="frame" x="167" y="773" width="80" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HGJ-2M-pMj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="bVc-WI-fzW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="toggleMovieRecording:" destination="Qkp-td-BwB" eventType="touchUpInside" id="Vv1-Td-uej"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Unavailable" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHW-7p-4Xf" userLabel="Camera Unavailable">
+                                <rect key="frame" x="103.5" y="440.5" width="207" height="29"/>
+                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQc-DZ-8Wa" userLabel="Resume">
+                                <rect key="frame" x="124.5" y="435.5" width="165" height="39"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                <state key="normal" title="Tap to resume">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resumeInterruptedSession:" destination="Qkp-td-BwB" eventType="touchUpInside" id="wPI-nb-vtI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eA-aO-9pC">
+                                <rect key="frame" x="358" y="770" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="GFF-wt-y3I"/>
+                                    <constraint firstAttribute="height" constant="36" id="wR9-af-LgC"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="switch"/>
+                                <connections>
+                                    <action selector="toggleCamera:" destination="Qkp-td-BwB" eventType="touchUpInside" id="TTE-Tz-lJr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="z7h-gZ-AgL"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VaV-w8-RIi" firstAttribute="width" relation="lessThanOrEqual" secondItem="z7h-gZ-AgL" secondAttribute="width" id="1uQ-Jc-o0h"/>
+                            <constraint firstItem="VaV-w8-RIi" firstAttribute="centerY" secondItem="z7h-gZ-AgL" secondAttribute="centerY" id="36k-8u-EnW"/>
+                            <constraint firstItem="PsI-xc-dha" firstAttribute="width" relation="lessThanOrEqual" secondItem="z7h-gZ-AgL" secondAttribute="width" id="8D8-4t-GL9"/>
+                            <constraint firstItem="VaV-w8-RIi" firstAttribute="width" secondItem="PsI-xc-dha" secondAttribute="width" multiplier="0.25" id="BOZ-1H-SHJ"/>
+                            <constraint firstItem="VaV-w8-RIi" firstAttribute="bottom" secondItem="sSt-NH-JRt" secondAttribute="bottom" constant="20" id="F6R-Jz-Z9M"/>
+                            <constraint firstItem="3eA-aO-9pC" firstAttribute="centerY" secondItem="sSt-NH-JRt" secondAttribute="centerY" id="Hm2-0E-Eud"/>
+                            <constraint firstItem="pQc-DZ-8Wa" firstAttribute="centerX" secondItem="z7h-gZ-AgL" secondAttribute="centerX" id="Iys-Kf-p4G"/>
+                            <constraint firstItem="PsI-xc-dha" firstAttribute="bottom" secondItem="sSt-NH-JRt" secondAttribute="bottom" constant="20" id="Mgh-9h-Ydl"/>
+                            <constraint firstItem="pQc-DZ-8Wa" firstAttribute="centerY" secondItem="z7h-gZ-AgL" secondAttribute="centerY" id="MhC-Wt-2AQ"/>
+                            <constraint firstItem="PsI-xc-dha" firstAttribute="centerY" secondItem="z7h-gZ-AgL" secondAttribute="centerY" id="O2b-gS-bNc"/>
+                            <constraint firstItem="VaV-w8-RIi" firstAttribute="width" secondItem="z7h-gZ-AgL" secondAttribute="width" priority="750" id="OKk-Eo-eVJ"/>
+                            <constraint firstItem="PsI-xc-dha" firstAttribute="centerX" secondItem="z7h-gZ-AgL" secondAttribute="centerX" id="RSX-kp-nvg"/>
+                            <constraint firstItem="PsI-xc-dha" firstAttribute="width" secondItem="z7h-gZ-AgL" secondAttribute="width" priority="750" id="UHR-gA-OOk"/>
+                            <constraint firstItem="PsI-xc-dha" firstAttribute="width" secondItem="VaV-w8-RIi" secondAttribute="width" multiplier="0.25" id="VoG-rV-rP7"/>
+                            <constraint firstItem="VaV-w8-RIi" firstAttribute="centerX" secondItem="z7h-gZ-AgL" secondAttribute="centerX" id="Vri-2r-aMd"/>
+                            <constraint firstItem="VaV-w8-RIi" firstAttribute="bottom" secondItem="PsI-xc-dha" secondAttribute="bottom" constant="20" id="fOJ-mr-Ef7"/>
+                            <constraint firstItem="PsI-xc-dha" firstAttribute="leading" secondItem="VaV-w8-RIi" secondAttribute="leading" constant="-20" id="fdU-br-wXc"/>
+                            <constraint firstItem="cHW-7p-4Xf" firstAttribute="centerY" secondItem="z7h-gZ-AgL" secondAttribute="centerY" id="gBW-Nc-MDb"/>
+                            <constraint firstItem="cHW-7p-4Xf" firstAttribute="centerX" secondItem="z7h-gZ-AgL" secondAttribute="centerX" id="ifL-gd-4ym"/>
+                            <constraint firstItem="VaV-w8-RIi" firstAttribute="height" relation="lessThanOrEqual" secondItem="z7h-gZ-AgL" secondAttribute="height" id="imR-SJ-uj7"/>
+                            <constraint firstItem="PsI-xc-dha" firstAttribute="height" secondItem="z7h-gZ-AgL" secondAttribute="height" priority="750" id="n1B-KQ-uoh"/>
+                            <constraint firstItem="VaV-w8-RIi" firstAttribute="height" secondItem="z7h-gZ-AgL" secondAttribute="height" priority="750" id="nxL-ho-rcE"/>
+                            <constraint firstItem="PsI-xc-dha" firstAttribute="bottom" secondItem="VaV-w8-RIi" secondAttribute="bottom" constant="20" id="q6p-2o-bZr"/>
+                            <constraint firstItem="sSt-NH-JRt" firstAttribute="centerX" secondItem="z7h-gZ-AgL" secondAttribute="centerX" id="qqS-Yj-tu7"/>
+                            <constraint firstItem="VaV-w8-RIi" firstAttribute="leading" secondItem="PsI-xc-dha" secondAttribute="leading" constant="-20" id="qrL-0J-a3g"/>
+                            <constraint firstItem="z7h-gZ-AgL" firstAttribute="trailing" secondItem="3eA-aO-9pC" secondAttribute="trailing" constant="20" id="r9U-ct-zDC"/>
+                            <constraint firstItem="PsI-xc-dha" firstAttribute="height" relation="lessThanOrEqual" secondItem="z7h-gZ-AgL" secondAttribute="height" id="xtX-xY-l8H"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BOZ-1H-SHJ"/>
+                                <exclude reference="8D8-4t-GL9"/>
+                                <exclude reference="Mgh-9h-Ydl"/>
+                                <exclude reference="O2b-gS-bNc"/>
+                                <exclude reference="RSX-kp-nvg"/>
+                                <exclude reference="UHR-gA-OOk"/>
+                                <exclude reference="fdU-br-wXc"/>
+                                <exclude reference="n1B-KQ-uoh"/>
+                                <exclude reference="q6p-2o-bZr"/>
+                                <exclude reference="xtX-xY-l8H"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="backCameraVideoPreviewView" destination="VaV-w8-RIi" id="XgB-KG-BOj"/>
+                        <outlet property="cameraUnavailableLabel" destination="cHW-7p-4Xf" id="emH-TU-cFM"/>
+                        <outlet property="frontCameraVideoPreviewView" destination="PsI-xc-dha" id="eNy-6I-vSd"/>
+                        <outlet property="recordButton" destination="sSt-NH-JRt" id="Urz-Dr-r7Z"/>
+                        <outlet property="resumeButton" destination="pQc-DZ-8Wa" id="C2u-Zq-M4T"/>
+                        <outletCollection property="frontCameraPiPConstraints" destination="OKk-Eo-eVJ" collectionClass="NSMutableArray" id="bye-49-6oa"/>
+                        <outletCollection property="frontCameraPiPConstraints" destination="Vri-2r-aMd" collectionClass="NSMutableArray" id="4d1-st-LzW"/>
+                        <outletCollection property="frontCameraPiPConstraints" destination="36k-8u-EnW" collectionClass="NSMutableArray" id="vIv-ep-z0Q"/>
+                        <outletCollection property="frontCameraPiPConstraints" destination="nxL-ho-rcE" collectionClass="NSMutableArray" id="1Pw-tm-8R9"/>
+                        <outletCollection property="frontCameraPiPConstraints" destination="1uQ-Jc-o0h" collectionClass="NSMutableArray" id="KCe-aO-Eqr"/>
+                        <outletCollection property="frontCameraPiPConstraints" destination="imR-SJ-uj7" collectionClass="NSMutableArray" id="SQG-xS-tbG"/>
+                        <outletCollection property="frontCameraPiPConstraints" destination="fOJ-mr-Ef7" collectionClass="NSMutableArray" id="tah-Nf-20f"/>
+                        <outletCollection property="frontCameraPiPConstraints" destination="VoG-rV-rP7" collectionClass="NSMutableArray" id="zQB-sg-zzm"/>
+                        <outletCollection property="frontCameraPiPConstraints" destination="qrL-0J-a3g" collectionClass="NSMutableArray" id="iCY-oo-Mn6"/>
+                        <outletCollection property="frontCameraPiPConstraints" destination="F6R-Jz-Z9M" collectionClass="NSMutableArray" id="0GZ-rc-Suw"/>
+                        <outletCollection property="backCameraPiPConstraints" destination="RSX-kp-nvg" collectionClass="NSMutableArray" id="ANN-Zo-32B"/>
+                        <outletCollection property="backCameraPiPConstraints" destination="O2b-gS-bNc" collectionClass="NSMutableArray" id="hoY-BZ-Osd"/>
+                        <outletCollection property="backCameraPiPConstraints" destination="8D8-4t-GL9" collectionClass="NSMutableArray" id="7Ai-c9-WIq"/>
+                        <outletCollection property="backCameraPiPConstraints" destination="xtX-xY-l8H" collectionClass="NSMutableArray" id="2Cn-5N-xKt"/>
+                        <outletCollection property="backCameraPiPConstraints" destination="n1B-KQ-uoh" collectionClass="NSMutableArray" id="9kh-eO-HIX"/>
+                        <outletCollection property="backCameraPiPConstraints" destination="UHR-gA-OOk" collectionClass="NSMutableArray" id="14c-rU-9MZ"/>
+                        <outletCollection property="backCameraPiPConstraints" destination="BOZ-1H-SHJ" collectionClass="NSMutableArray" id="K59-8b-3Uq"/>
+                        <outletCollection property="backCameraPiPConstraints" destination="fdU-br-wXc" collectionClass="NSMutableArray" id="uv9-LM-A61"/>
+                        <outletCollection property="backCameraPiPConstraints" destination="q6p-2o-bZr" collectionClass="NSMutableArray" id="YPq-4a-ALl"/>
+                        <outletCollection property="backCameraPiPConstraints" destination="Mgh-9h-Ydl" collectionClass="NSMutableArray" id="l38-MG-Eyh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gdK-1J-umJ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="switch" width="25" height="25"/>
+    </resources>
+</document>
