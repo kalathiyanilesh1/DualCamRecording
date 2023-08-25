@@ -320,14 +320,13 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 3H7Q9UC489;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DualCamRecord/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) uses the camera to record video.";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "$(PRODUCT_NAME) uses the microphone to record audio.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(PRODUCT_NAME) saves recorded movies to your photo library.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "DualCamRecord uses the camera to record video.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "DualCamRecord uses the microphone to record audio.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "DualCamRecord saves recorded movies to your photo library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,14 +354,13 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 3H7Q9UC489;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DualCamRecord/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) uses the camera to record video.";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "$(PRODUCT_NAME) uses the microphone to record audio.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(PRODUCT_NAME) saves recorded movies to your photo library.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "DualCamRecord uses the camera to record video.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "DualCamRecord uses the microphone to record audio.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "DualCamRecord saves recorded movies to your photo library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
